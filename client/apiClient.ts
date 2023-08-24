@@ -1,14 +1,33 @@
 import request from 'superagent'
+import { mapFullCard, mapMinCard } from '../lib/utils.ts'
+import { Card, FullCard, RawCard, Suit } from '../models/types.ts'
 
-const TAROT_URL = 'https://tarot-api-3hv5.onrender.com/api/v1/'
+const TAROT_URL: string = 'https://tarot-api-3hv5.onrender.com/api/v1'
 
-
-function getAllCards() {
-
+// Returns all available cards
+async function getAllCards(): Promise<Card[]> {
+  const cards = await getCards(`${TAROT_URL}/cards`)
+  return cards.map((card: RawCard) => mapMinCard(card))
 }
 
-// API CLIENT METHOD
-//
-// GET all tarot cards under specified WANDS/SWORDS/COINS/CUPS etc.
-//
-//   e.g getTarotCards('wands')
+// Returns a card by suit
+async function getCardBySuit(suit: Suit): Promise<Card[]> {
+  const cards = await getCards(`${TAROT_URL}/cards/suits/${suit}`)
+  return cards.map((card: RawCard) => mapMinCard(card))
+}
+
+// Returns all major cards
+async function getMajorCards(): Promise<Card[]> {
+  const cards = await getCards(`${TAROT_URL}/cards/search?type=major`)
+  return cards.map((card: RawCard) => mapMinCard(card))
+}
+
+// Returns a card by value
+async function getCardByValue(value: string): Promise<FullCard> {
+  const card = (await getCards(`${TAROT_URL}/cards/search?value=${value}`))[0]
+  return mapFullCard(card)
+}
+
+const getCards = async (url: string): Promise<RawCard[]> => (JSON.parse((await request.get(url)).text)).cards
+
+export {getAllCards, getCardBySuit, getMajorCards, getCardByValue}
