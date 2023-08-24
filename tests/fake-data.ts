@@ -127,7 +127,7 @@ const majorCards: Data = {
   ]
 }
 
-const valueZeroCards: Data = {
+const valueCards: Data = {
   'nhits': 2,
   'cards': [
     {
@@ -153,4 +153,4 @@ const valueZeroCards: Data = {
   ]
 }
 
-export default { allCards, wandsCards, majorCards, valueZeroCards}
+export default { allCards, wandsCards, majorCards, valueCards}
