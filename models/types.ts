@@ -1,3 +1,14 @@
+export interface RawCard {
+  type: string;
+  name_short: string;
+  name: string;
+  suit?: string
+  value: string;
+  value_int: number;
+  meaning_up: string;
+  meaning_rev: string;
+  desc: string;
+}
 
 export interface FullCard extends Card {
   suit: string
@@ -9,6 +20,7 @@ export interface FullCard extends Card {
 export interface Card {
   identifier: string
   name: string
-  altText: string
-  value: number
+  suit: string
+  description: string
+  value: string
 }
