@@ -23,8 +23,9 @@ async function getMajorCards(): Promise<Card[]> {
 }
 
 // Returns a card by value
-async function getCardByValue(value: string): Promise<FullCard> {
+async function getCardByValue(value: string): Promise<FullCard | undefined> {
   const card = (await getCards(`${TAROT_URL}/cards/search?value=${value}`))[0]
+  if (!card) return undefined
   return mapFullCard(card)
 }
 
