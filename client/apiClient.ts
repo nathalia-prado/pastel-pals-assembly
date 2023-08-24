@@ -30,4 +30,4 @@ async function getCardByValue(value: string): Promise<FullCard> {
 
 const getCards = async (url: string): Promise<RawCard[]> => (JSON.parse((await request.get(url)).text)).cards
 
-export {getAllCards, getCardBySuit, getMajorCards, getCardByValue}
+export {getAllCards, getCardBySuit, getMajorCards, getCardByValue, getCards}
