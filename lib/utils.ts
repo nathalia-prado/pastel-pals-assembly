@@ -11,7 +11,7 @@ const mapFullCard = (card: RawCard): FullCard => {
 
 const mapMinCard = (card: RawCard): Card => {
   const { identifier, name, suit, description, value } = mapFullCard(card)
-  return { identifier, name, suit, description, value }
+  return { identifier, name, suit, value }
 }
 
 export { mapFullCard, mapMinCard }
