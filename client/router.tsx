@@ -7,6 +7,7 @@ import {
 import App from './components/App'
 import Home from './components/Home'
 import Card from './components/Card'
+import CardInfo from './components/CardInfo'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ export const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="/cards/:type" element={<Card />} />
       <Route path="/cards/:type/:suit" element={<Card />} />
+      <Route path="/card/:value" element={<CardInfo />} />
     </Route>
   )
 )
