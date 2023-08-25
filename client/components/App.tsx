@@ -12,11 +12,11 @@ function App() {
         <h1>Navigating the Tarot Finder routes</h1>
       </div>
       <div className="main">
-        <Nav />
         <Outlet />
       </div>
     </>
   )
 }
+
 
 export default App
