@@ -19,10 +19,10 @@ export const router = createBrowserRouter(
       {/* <Route path="/fortunes" element={<Fortunes />} />
       <Route path="/fortunes/:fortunetype" element={<FortunesTypes />} /> */}
       <Route path="/cards/major" element={<Major />} />
-      <Route path="/cards/major/:card" element={<Card />} />
+      <Route path="/cards/major/:card" element={<CardInfo />} />
       <Route path="/cards/minor" element={<Minor />} />
       <Route path="/cards/minor/:suit" element={<Suits />} />
-      <Route path="/cards/minor/:suit/:card" element={<Card />} />
+      <Route path="/cards/minor/:suit/:card" element={<CardInfo />} />
     </Route>
   )
 )
