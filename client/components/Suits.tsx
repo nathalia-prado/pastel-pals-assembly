@@ -38,7 +38,7 @@ export default function Suit() {
   return (
     <>
       <h2>{suit} Cards</h2>
-      <ol>{cardLinks}</ol>s
+      <ol>{cardLinks}</ol>
     </>
   )
 }
