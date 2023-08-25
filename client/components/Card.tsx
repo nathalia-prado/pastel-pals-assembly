@@ -1,5 +1,15 @@
 import { Link } from 'react-router-dom'
 
+//cards/:type
+//WHAT SHOULD THIS DISPLAY - option to choose suits
+// if major {all cards that are in the Major Arcana}
+// id minor {display 4 buttons - 1 for each suit}
+
+// if(cards.type === 'major'){
+//     return await getMajorCards()
+// }
+// else(return await getCardBySuit())
+
 function Card() {
   return (
     <>

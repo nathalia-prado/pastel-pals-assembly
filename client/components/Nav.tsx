@@ -5,9 +5,7 @@ function Nav() {
     <div>
       <h2>Nav</h2>
       <ul>
-        <li>
-          <Link to={`cards/:type`}>TEST</Link>{' '}
-        </li>
+        <li>{/* <Link to={`cards/${cards.type}`}>Type</Link> */}</li>
       </ul>
     </div>
   )
