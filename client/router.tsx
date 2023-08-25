@@ -15,7 +15,7 @@ export const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="/cards/:type" element={<Card />} />
       <Route path="/cards/:type/:suit" element={<Card />} />
-      <Route path="/card/:id" element={<CardInfo />} />
+      <Route path="/card/:value" element={<CardInfo />} />
     </Route>
   )
 )

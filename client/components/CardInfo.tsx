@@ -9,7 +9,7 @@ export default function Card() {
 
     useEffect(() => {
         async function fetchCard() {
-            const cardData = await getCardByValue(params.id || '')
+            const cardData = await getCardByValue(params.value || '')
             setCard(cardData)
         }
 
