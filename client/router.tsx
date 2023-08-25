@@ -8,14 +8,21 @@ import App from './components/App'
 import Home from './components/Home'
 import Card from './components/Card'
 import CardInfo from './components/CardInfo'
+import Major from './components/Major'
+import Minor from './components/Minor'
+import Suits from './components/Suits'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
-      <Route path="/cards/:type" element={<Card />} />
-      <Route path="/cards/:type/:suit" element={<Card />} />
-      <Route path="/card/:value" element={<CardInfo />} />
+      {/* <Route path="/fortunes" element={<Fortunes />} />
+      <Route path="/fortunes/:fortunetype" element={<FortunesTypes />} /> */}
+      <Route path="/cards/major" element={<Major />} />
+      <Route path="/cards/major/:card" element={<CardInfo />} />
+      <Route path="/cards/minor" element={<Minor />} />
+      <Route path="/cards/minor/:suit" element={<Suits />} />
+      <Route path="/cards/minor/:suit/:card" element={<CardInfo />} />
     </Route>
   )
 )
@@ -31,3 +38,12 @@ export const router = createBrowserRouter(
 // cards/minor/coin - display all coin cards
 
 // STRETCH ------  /cards/:type/:suit/:identifier  ----- STRETCH //
+
+// <Route path={'/major'} element={<Major/>>
+//   <Route path={'/:type'} element={<Suit/>>
+//     <Route path={'/:card'} element={<Card/>/>
+//   </Route>
+// </Route>
+// <Route path={'/minor'} element={<Minor/>>
+//     <Route path={'/:card'} element={<Card/>/>
+// </Route>
