@@ -20,6 +20,7 @@ export default function CardInfo() {
     }
   }, [])
 
+  console.log(params.card)
   // prevent showing invalid cards
   if (!card) {
     return null
