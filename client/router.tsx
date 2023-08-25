@@ -11,6 +11,7 @@ import Major from './components/Major'
 import Minor from './components/Minor'
 import Suits from './components/Suits'
 import Fortunes from './components/Fortunes'
+import FortunesHoseshoe from './components/FortuneHorseshoe'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ export const router = createBrowserRouter(
       <Route path="/cards/minor/:suit" element={<Suits />} />
       <Route path="/cards/minor/:suit/:card" element={<CardInfo />} />
       <Route path="/fortune" element={<Fortunes />} />
+      <Route path="./fortuneshorseshoe" element={<FortunesHoseshoe />} />
     </Route>
   )
 )

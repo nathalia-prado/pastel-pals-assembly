@@ -12,7 +12,10 @@ function Home() {
         <h1>Minor</h1>
       </Link>
       <Link to={'./fortunes'}>
-        <h1>Fortunes</h1>
+        <h1>Advice Fortune</h1>
+      </Link>
+      <Link to={'./fortuneshorseshoe'}>
+        <h1>Horseshoe Fortune</h1>
       </Link>
     </div>
   )
