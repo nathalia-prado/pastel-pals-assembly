@@ -10,7 +10,6 @@ export default function Card() {
     useEffect(() => {
         async function fetchCard() {
             const cardData = await getCardByValue(params.id || '')
-            console.log(cardData)
             setCard(cardData)
         }
 
@@ -21,7 +20,7 @@ export default function Card() {
         }
     }, [])
 
-    // prevent show invalid cards
+    // prevent showing invalid cards
     if (!card) {
         return null
     }
