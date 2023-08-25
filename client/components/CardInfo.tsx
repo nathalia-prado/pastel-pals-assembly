@@ -28,6 +28,7 @@ export default function CardInfo() {
 
   return (
     <div>
+      <img alt={card.description} src={`/tarot-images/${card.identifier}.jpg`}/>
       <h2>
         <b>{card.name}</b>
       </h2>
