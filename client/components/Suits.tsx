@@ -26,7 +26,7 @@ export default function Suit() {
     getCards()
   }, [])
 
-  if (!cards) return <h1>INVALID SUIT</h1>
+  if (!cards.length) return <h1>INVALID SUIT</h1>
 
   // todo replace stubs for card preview component
   const cardLinks = cards?.map((card) => (
