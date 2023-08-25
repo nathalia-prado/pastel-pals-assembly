@@ -3,7 +3,7 @@ import { FullCard as FullCardType } from "../../models/types";
 import { getCardByValue } from "../apiClient";
 import { useParams } from 'react-router-dom';
 
-export default function Card() {
+export default function CardInfo() {
     const [card, setCard] = useState<FullCardType | undefined>(undefined)
     const params = useParams();
 
