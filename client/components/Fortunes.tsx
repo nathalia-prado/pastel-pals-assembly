@@ -86,8 +86,13 @@ function Fortunes() {
         <div className="card-one">
           <h2>Do this</h2>
           <p>This card tells you what you're doing right</p>
+
           {adviceCard.card && (
             <>
+              <img
+                alt={adviceCard.card.description}
+                src={`/tarot-images/${adviceCard.card.identifier}.jpg`}
+              />
               <div>
                 {!adviceCard.upward && 'REVERSE '}
                 {adviceCard.card.name}
@@ -107,6 +112,10 @@ function Fortunes() {
           </p>
           {avoidCard.card && (
             <>
+              <img
+                alt={avoidCard.card.description}
+                src={`/tarot-images/${avoidCard.card.identifier}.jpg`}
+              />
               <div>
                 {!avoidCard.upward && 'REVERSE '}
                 {avoidCard.card.name}
@@ -124,6 +133,10 @@ function Fortunes() {
           <p>This card tells you what will be needed for success</p>
           {attitudeCard.card && (
             <>
+              <img
+                alt={attitudeCard.card.description}
+                src={`/tarot-images/${attitudeCard.card.identifier}.jpg`}
+              />
               <div>
                 {!attitudeCard.upward && 'REVERSE '}
                 {attitudeCard.card.name}

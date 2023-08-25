@@ -14,8 +14,8 @@ function Minor() {
       <Link to={'/cards/minor/wands'}>
         <h2>Wands</h2>
       </Link>
-      <Link to={'/cards/minor/coins'}>
-        <h2>Coins</h2>
+      <Link to={'/cards/minor/pentacles'}>
+        <h2>Pentacles</h2>
       </Link>
     </>
   )

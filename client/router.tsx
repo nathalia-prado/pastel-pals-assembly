@@ -6,11 +6,11 @@ import {
 
 import App from './components/App'
 import Home from './components/Home'
-import Card from './components/Card'
 import CardInfo from './components/CardInfo'
 import Major from './components/Major'
 import Minor from './components/Minor'
 import Suits from './components/Suits'
+import Fortunes from './components/Fortunes'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +23,7 @@ export const router = createBrowserRouter(
       <Route path="/cards/minor" element={<Minor />} />
       <Route path="/cards/minor/:suit" element={<Suits />} />
       <Route path="/cards/minor/:suit/:card" element={<CardInfo />} />
+      <Route path="/fortune" element={<Fortunes />} />
     </Route>
   )
 )
