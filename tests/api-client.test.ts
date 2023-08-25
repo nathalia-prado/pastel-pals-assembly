@@ -109,7 +109,7 @@ describe('getCardByValue', () => {
   it('Should return a single mapped card by value', async () => {
 
     nock(TAROT_URL)
-      .get(`/cards/search?value=10`)
+      .get(`/cards/search?q=10`)
       .reply(200, JSON.stringify(data.valueCards))
 
     const card = await getCardByValue('10')
@@ -130,7 +130,7 @@ describe('getCardByValue', () => {
   it('Should return undefined if the queried card does not exist', async () => {
 
     nock(TAROT_URL)
-      .get(`/cards/search?value=abcde`)
+      .get(`/cards/search?q=abcde`)
       .reply(200, JSON.stringify({
         "nhits": 0,
         "cards": []
