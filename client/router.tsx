@@ -7,6 +7,7 @@ import {
 import App from './components/App'
 import Home from './components/Home'
 import Card from './components/Card'
+import CardInfo from './components/CardInfo'
 import Major from './components/Major'
 import Minor from './components/Minor'
 import Suits from './components/Suits'
